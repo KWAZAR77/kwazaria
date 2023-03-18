@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Teko', sans-serif ;
+    src: url(../fonts/Teko-Regular.ttf);
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Teko', sans-serif ; 
+    line-height: 1.5;
+}
+
+.main-header{
+    position: relative;
+
+}
+.layers{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+.layers_base{
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5 ),0);
+}
+.layers_middle{
+    transform: translate3d(0, calc(var(--scrollTop) / 5 ),0);
+}
+.main-article{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.layer_header{
+    z-index: 1;
+    text-transform: uppercase;
+    transform: translate3d(0, calc(var(--scrollTop) / 2.7 ),0);
+    font-weight: 500;
+    color:white;
+    text-shadow: 0 0 10px;
+}
+.layers_caption{
+    font-size: 50px;
+    letter-spacing: 7px;
+}    
+.layers_title{
+    font-size: 35px;
+    line-height:4;
+    letter-spacing: 13px;
+}
+.main-article__content *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main-header::after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background-image: url();
+}
+
